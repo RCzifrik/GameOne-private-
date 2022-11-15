@@ -3,16 +3,19 @@
         <div class="d-flex flex-grow-1 justify-content-center" id="">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link text-light active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link text-light" href="#">RPG</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link text-light" href="#">Open world</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link text-light" href="#">Survival</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Platformer</a>
                 </li>
             </ul>
         </div>
