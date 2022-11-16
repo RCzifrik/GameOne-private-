@@ -1,9 +1,35 @@
-.profilePicture {
-    width: 5%;
-    border: 1px solid black;
-    vertical-align: middle;
+header {
+    height: 7.5em;
 }
 
-i {
-    font-size: 400%;
+.profilePicture {
+    width: 65%;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+
+.welcomeName {
+    padding-top: 1.2em;
+}
+
+.search {
+    padding-top: 2em;
+}
+
+.profilePicture:hover {
+    width: 75%;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+.darkMode {
+    font-size: 350%;
+    color: lightgray;
+    transition: 0.2s;
+}
+
+.darkMode:hover {
+    font-size: 375%;
+    color: black;
+    background-color: darkgray;
 }
