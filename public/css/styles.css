@@ -32,6 +32,7 @@ header {
     font-size: 375%;
     color: black;
     background-color: darkgray;
+}
 
 /*this is to hide the scrollbar in chrome*/
 ::-webkit-scrollbar {
@@ -57,4 +58,13 @@ main {
 
 .cardButton {
     margin-top: 75%;
+}
+
+main {
+    background-image: url("../img/backgroundGameOne.jpg");
+}
+
+.toggleChange {
+    text-decoration: none !important;
+    margin: auto !important;
 }

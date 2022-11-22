@@ -7,7 +7,6 @@
                  include_once ('defaults/nav.php'); 
                  include_once('defaults/homeMain.php');
             ?>
-            <p class="text-warning">test</p>
         </main>
         <?php include_once ('defaults/footer.php'); ?>
         <!-- JavaScript Bundle with Popper -->
