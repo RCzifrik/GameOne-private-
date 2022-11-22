@@ -32,4 +32,29 @@ header {
     font-size: 375%;
     color: black;
     background-color: darkgray;
+
+/*this is to hide the scrollbar in chrome*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+/*this is to hide the scrollbar in firefox*/
+body {
+    scrollbar-width: none;
+}
+
+main {
+    margin: 0px;
+    height: 100%;
+    background-image: url("../img/backgroundGameOne.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    margin: 0px;
+}
+
+.cardButton {
+    margin-top: 75%;
 }
