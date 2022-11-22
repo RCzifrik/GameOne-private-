@@ -1,0 +1,16 @@
+@media only screen and (orientation: portrait) and (max-width:800px){
+    .left-container .profile-container .welcome-text {
+        display: none;
+    }
+
+    .right-container form .input-search-button {
+        display: none;
+    }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 800px) and (orientation: landscape){
+    .left-container .profile-container {
+        display:flex;
+        flex-direction: column;
+    }
+}
