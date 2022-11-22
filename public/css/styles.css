@@ -68,3 +68,7 @@ main {
     text-decoration: none !important;
     margin: auto !important;
 }
+
+.hoverChange:hover {
+    cursor: pointer;
+}

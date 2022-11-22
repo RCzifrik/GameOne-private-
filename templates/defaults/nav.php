@@ -7,7 +7,7 @@
                 </li>
                 <li class="nav-item d-flex align-items-center">
                     <div class="dropdown">
-                        <a class="toggleChange dropdown-toggle text-light border-0" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="hoverChange toggleChange dropdown-toggle text-light border-0" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                             Categories
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
