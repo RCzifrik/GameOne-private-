@@ -1,0 +1,44 @@
+@keyframes named {
+  33% {
+    color: currentColor;
+  } 66% {
+    color: #01002000;
+  } 100% {
+    color: currentColor;
+  }
+}
+
+body {
+  height: 100vh;
+  background-image: url("../img/backgroundGameOne.jpg");
+  display: flex;
+  flex-direction: column;
+}
+
+h4 {
+  margin: 0;
+}
+.aa form {
+  border: none;
+  outline: 1px solid white;
+  outline-offset: 30px;
+}
+
+.aa form input {
+  border: none;
+  border-radius: 3px;
+  outline: 2px solid rgb(25, 85, 153);
+  font-size: 18px;
+  width: 16em;
+  height: 2.1em;
+  color: #010020;
+}
+.aa form input:focus{
+  outline: rgb(17, 92, 2) 2px solid;
+  border-radius: 5px;		
+  animation: named infinite 2.2s;
+}
+
+.aa form .ac {
+  font-size: 13px;
+}
