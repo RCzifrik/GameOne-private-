@@ -5,6 +5,7 @@
 <main>
     <?php
     include_once ('defaults/nav.php');
+    include_once ('defaults/gameListMain.php');
     ?>
 </main>
 <?php include_once ('defaults/footer.php'); ?>

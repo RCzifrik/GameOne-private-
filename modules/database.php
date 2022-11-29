@@ -1,6 +1,6 @@
 <?php
 $host = '127.0.0.1';
-$db   = 'game-one';
+$db   = 'gameOne';
 $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';
@@ -14,7 +14,7 @@ $options = [
 
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
-    include_once ('../Classes/Category.php');
+    include_once('../Classes/Genre.php');
     include_once ('../Classes/Product.php');
     include_once ('../Classes/Review.php');
     include_once ('../Classes/User.php');

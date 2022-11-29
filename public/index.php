@@ -9,7 +9,7 @@ session_start();
 require '../Modules/categories.php';
 require '../Modules/login.php';
 require '../Modules/logout.php';
-//require '../Modules/database.php';
+require '../Modules/database.php';
 require '../Modules/common.php';
 
 
@@ -27,17 +27,23 @@ switch ($params[1]) {
 
     case 'categories':
         $titleSuffix = ' | Categories';
-        $categories = getCategories();
+
         //var_dump($categories);die;
         include_once "../Templates/categories.php";
         break;
 
     case 'category':
+        $id = $params[2];
+        $products = getCategory($id);
         include_once "../Templates/home.php";
         break;
 
     default:
         $titleSuffix = ' | Home';
+        $categories = getCategories();
         include_once "../Templates/home.php";
+        //include_once "../templates/gameList.php";
+        //include_once "../templates/gameDetail.php";
+    break;
 }
 ?>
