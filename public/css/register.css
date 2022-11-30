@@ -1,10 +1,19 @@
 @keyframes named {
-  33% {
+  20% {
     color: currentColor;
-  } 66% {
+    outline-color: #135299;
+  } 40% {
+    color: currentColor;
+    outline-color: #3d95fa;
+  } 60% {
     color: #01002000;
+    outline-color: #135299;
+  } 80% {
+    color: currentColor;
+    outline-color: #3d95fa;
   } 100% {
     color: currentColor;
+    outline-color: #135299;
   }
 }
 
@@ -18,27 +27,29 @@ body {
 h4 {
   margin: 0;
 }
-.aa form {
+
+.RaMRwPna form {
   border: none;
   outline: 1px solid white;
   outline-offset: 30px;
+  background: radial-gradient(closest-corner, #ebebeb, #ebebeb, #ebebeb,#00000010);
 }
 
-.aa form input {
+.RaMRwPna form input {
   border: none;
   border-radius: 3px;
-  outline: 2px solid rgb(25, 85, 153);
+  outline: 2px solid #3d95fa;
   font-size: 18px;
   width: 16em;
   height: 2.1em;
   color: #010020;
 }
-.aa form input:focus{
-  outline: rgb(17, 92, 2) 2px solid;
-  border-radius: 5px;		
-  animation: named infinite 2.2s;
+.RaMRwPna form input:focus{	
+  outline-color: #135299;
+  animation: named infinite reverse 3s;
+
 }
 
-.aa form .ac {
+.RaMRwPna form .fBLpnJUC {
   font-size: 13px;
 }
