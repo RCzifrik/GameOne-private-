@@ -11,10 +11,19 @@
                             Categories
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <li><button class="dropdown-item" type="button">RPG</button></li>
-                            <li><button class="dropdown-item" type="button">Open world</button></li>
-                            <li><button class="dropdown-item" type="button">Action</button></li>
-                            <li><button class="dropdown-item" type="button">Platformer</button></li>
+                            <?php
+                                try {
+                                    global $pdo;
+                                    $query = $pdo->prepare("SELECT * FROM genre");
+                                    $query->execute();
+                                    $result = $query->fetchAll(PDO::FETCH_CLASS);
+                                    foreach ($result as &$data) {
+                                        echo "<li><button class='dropdown-item' type='button' href='../templates/gameList.php?id=" . $data->id . "'>" . $data->name . "</button></li>";
+                                    }
+                                } catch (PDOException $e) {
+                                    die("Error!: " . $e->getMessage());
+                                }
+                            ?>
                         </ul>
                     </div>
                 </li>

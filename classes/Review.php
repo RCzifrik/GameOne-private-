@@ -4,17 +4,16 @@
 class Review
 {
     public $id;
-    public $name;
-    public $date;
+    public $score;
+    public $title;
     public $description;
-    public $stars;
+    public $game_id;
     public $user_id;
-    public $product_id;
 
     public function __construct()
     {
         settype($this->id, 'integer');
-        settype($this->product_id, 'integer');
+        settype($this->game_id, 'integer');
         settype($this->user_id, 'integer');
     }
 }

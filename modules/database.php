@@ -15,7 +15,7 @@ $options = [
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
     include_once('../Classes/Genre.php');
-    include_once ('../Classes/Product.php');
+    include_once('../Classes/Game.php');
     include_once ('../Classes/Review.php');
     include_once ('../Classes/User.php');
 } catch (\PDOException $e) {

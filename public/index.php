@@ -18,7 +18,7 @@ $message = "";
 $request = $_SERVER['REQUEST_URI'];
 
 $params = explode("/", $request);
-$title = "HealthOne";
+$title = "GameOne";
 $titleSuffix = "";
 
 //$params[1] is de action
