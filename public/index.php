@@ -16,8 +16,8 @@ require '../Modules/common.php';
 $message = "";
 
 $request = $_SERVER['REQUEST_URI'];
-
 $params = explode("/", $request);
+var_dump($params);
 $title = "GameOne";
 $titleSuffix = "";
 
