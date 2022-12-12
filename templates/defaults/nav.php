@@ -18,7 +18,7 @@
                                     $query->execute();
                                     $result = $query->fetchAll(PDO::FETCH_CLASS);
                                     foreach ($result as &$data) {
-                                        echo "<li><a href='/category/2'><button class='dropdown-item' type='button'>" . $data->name . "</button></a></li>";
+                                        echo "<li><a href='/category/" . $data->id . "'><button class='dropdown-item' type='button'>" . $data->name . "</button></a></li>";
                                     }
                                 } catch (PDOException $e) {
                                     die("Error!: " . $e->getMessage());
