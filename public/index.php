@@ -11,13 +11,13 @@
     require '../Modules/logout.php';
     require '../Modules/database.php';
     require '../Modules/common.php';
+    require '../modules/gameLoader.php';
 
 
     $message = "";
 
     $request = $_SERVER['REQUEST_URI'];
     $params = explode("/", $request);
-    var_dump($params);
     $title = "GameOne";
     $titleSuffix = "";
 
@@ -32,10 +32,10 @@
             include_once "../Templates/home.php";
             break;
 
-        case 'category':
-            $id = $params[2];
-            $products = getCategory($id);
-            include_once "../templates/gameList.php?id=$id";
+        case '1':
+            $titleSuffix = ' | Platformer';
+            $games = getGames();
+            include_once "../templates/gameList.php";
             break;
 
         default:

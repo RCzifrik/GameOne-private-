@@ -10,7 +10,7 @@
                     <h5 class='card-title text-light text-center'>".
                 $category->name
                     ."</h5>
-                    <a href='/catagory/#' class='btn btn-dark cardButton'>Go to collection</a>
+                    <a href='$category->id' class='btn btn-dark cardButton'>Go to collection</a>
                 </div>
             </div>
             ";

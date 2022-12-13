@@ -1,12 +1,11 @@
 <?php
 
 
-class Game
+class Category
 {
     public $id;
     public $name;
-    public $description;
-    public $image;
+    public $picture;
 
     public function __construct()
     {
