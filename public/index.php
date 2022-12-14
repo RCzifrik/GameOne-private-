@@ -12,6 +12,7 @@
     require '../Modules/database.php';
     require '../Modules/common.php';
     require '../Modules/gamelist.php';
+    require '../Modules/gameDetail.php';
 
 
 
@@ -42,6 +43,16 @@
             $titleSuffix = ' | Platformer';
             $games = getGamelist();
             include_once "../templates/gameList.php";
+            break;
+
+        case "Super%20Mario%20Bros":
+        case "Need%20for%20Speed":
+        case "Mario%20Kart":
+        case "Crash%20Team%20Racing":
+        case "Elden%20Ring":
+        case "Dying%20Light":
+            $detailGame = getDetailGames();
+            include_once "../templates/gameDetail.php";
             break;
 
         default:

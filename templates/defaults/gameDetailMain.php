@@ -1,14 +1,18 @@
 <div class="container-md">
     <row>
-<!--        --><?php
-//        try {
-//            //$pdo = new PDO(global $dsn);
-//            global
-//            $queryDisplayGames = $pdo->prepare("SELECT * FROM game");
-//            $queryDisplayGames->execute();
-//        } catch (\PDOException $e) {
-//            throw new \PDOException($e->getMessage(), (int)$e->getCode());
-//        }
-//        ?>
-    </row>
-</div>
+        <?php global $detailGame ?>
+<?php
+foreach ($detailGame as $game){
+    echo "
+            <div class='card d-inline-flex mx-5' style='width:25%'>
+                <img src='./img/placeholder.png'>
+                <div class='card-img-overlay text-center'>
+                    <h5 class='card-title text-light text-center'>".
+        $game->name
+        ."</h5>
+                    <a href='$game->name' class='btn btn-dark cardButton'>Go to game details</a>
+                </div>
+            </div>
+            ";
+}
+?>
