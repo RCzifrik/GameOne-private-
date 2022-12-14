@@ -4,20 +4,20 @@
     //var_dump($_POST);
 
         //include_once ('../templates/home.php');
-        //include_once ('../templates/gameList.php');
+        //include_once ('../templates/gameListMain.php');
 
     require '../Modules/categories.php';
     require '../Modules/login.php';
     require '../Modules/logout.php';
     require '../Modules/database.php';
     require '../Modules/common.php';
+    require '../Modules/gamelist.php';
 
 
     $message = "";
 
     $request = $_SERVER['REQUEST_URI'];
     $params = explode("/", $request);
-    var_dump($params);
     $title = "GameOne";
     $titleSuffix = "";
 
@@ -32,17 +32,20 @@
             include_once "../Templates/home.php";
             break;
 
-        case 'category':
-            $id = $params[2];
-            $products = getCategory($id);
-            include_once "../templates/gameList.php?id=$id";
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+            $titleSuffix = ' | Platformer';
+            $games = getGamelist();
+            include_once "../templates/gameList.php";
             break;
 
         default:
             $titleSuffix = ' | Home';
             $categories = getCategories();
             include_once "../Templates/home.php";
-            //include_once "../templates/gameList.php";
+            //include_once "../templates/gameListMain.php";
             //include_once "../templates/gameDetail.php";
         break;
     }
