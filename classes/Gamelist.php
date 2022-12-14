@@ -1,7 +1,5 @@
 <?php
 
-
-
 class Gamelist
 {
     public $id;

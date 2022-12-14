@@ -30,13 +30,15 @@
             $titleSuffix = ' | Categories';
 
             //var_dump($categories);die;
-            include_once "../Templates/home.php";
+            include_once "../templates/home.php";
             break;
 
         case '1':
         case '2':
         case '3':
         case '4':
+        case '5':
+        case '6':
             $titleSuffix = ' | Platformer';
             $games = getGamelist();
             include_once "../templates/gameList.php";
@@ -45,7 +47,7 @@
         default:
             $titleSuffix = ' | Home';
             $categories = getCategories();
-            include_once "../Templates/home.php";
+            include_once "../templates/home.php";
             //include_once "../templates/gameListMain.php";
             //include_once "../templates/gameDetail.php";
         break;

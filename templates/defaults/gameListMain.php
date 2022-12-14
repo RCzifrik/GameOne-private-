@@ -10,7 +10,7 @@
                     <h5 class='card-title text-light text-center'>".
                 $game->name
                 ."</h5>
-                    <a href='$game->id' class='btn btn-dark cardButton'>Go to collection</a>
+                    <a href='$game->name' class='btn btn-dark cardButton'>Go to game details</a>
                 </div>
             </div>
             ";

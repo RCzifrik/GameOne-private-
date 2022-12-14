@@ -3,7 +3,7 @@
         <div class="d-flex flex-grow-1 justify-content-center" id="">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link text-light active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link text-light active" aria-current="page" href="home">Home</a>
                 </li>
                 <li class="nav-item d-flex align-items-center">
                     <div class="dropdown">
@@ -18,7 +18,7 @@
                                     $query->execute();
                                     $result = $query->fetchAll(PDO::FETCH_CLASS);
                                     foreach ($result as &$data) {
-                                        echo "<li><a href='/category/" . $data->id . "'><button class='dropdown-item' type='button'>" . $data->name . "</button></a></li>";
+                                        echo "<li><a href='$data->id'><button class='dropdown-item' type='button'>" . $data->name . "</button></a></li>";
                                     }
                                 } catch (PDOException $e) {
                                     die("Error!: " . $e->getMessage());
