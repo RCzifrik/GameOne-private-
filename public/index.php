@@ -27,6 +27,57 @@
     //$params[2] is een extra getal die de action nodig heeft om zijn taak uit te voeren
     switch ($params[1]) {
 
+        case 'login':
+
+            $titleSuffix = ' | Login';
+            if (isset($_POST['login'])) {
+                $result = checkLogin();
+
+                switch ($result) {
+                    case 'ADMIN':
+                        header("Location: /admin/home");
+                        break;
+                    case 'MEMBER':
+                        header("Location: /member/home");
+                        break;
+                    case 'FAILURE':
+                        $message = "Email of wachtwoord niet correct ingevuld!";
+                        include_once "../templates/login.php";
+                        break;
+                    case 'INCOMPLETE':
+                        $message = "Formulier niet volledig ingevuld!";
+                        include_once "../templates/login.php";
+                        break;
+                }
+            } else {
+                include_once "../templates/login.php";
+            }
+            break;
+
+
+        case 'register':
+            $titleSuffix = ' | Register';
+
+            if (isset($_POST['register'])) {
+                $result = makeRegistration();
+                switch ($result) {
+                    case 'SUCCESS':
+                        header("Location: /admin/home");
+                        break;
+                    case 'INCOMPLETE':
+                        $message = "Niet alle velden zijn correct ingevuld";
+                        include_once "../templates/register.php";
+                        break;
+                    case 'EXIST':
+                        $message = "Gebruiker bestaat al";
+                        include_once "../templates/register.php";
+                        break;
+                }
+            } else {
+                include_once "../templates/register.php";
+            }
+            break;
+
         case 'categories':
             $titleSuffix = ' | Categories';
 
