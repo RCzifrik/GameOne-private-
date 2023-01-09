@@ -1,5 +1,6 @@
 <div class="container-md">
         <?php global $detailGame ?>
+        <?php global $review ?>
 <?php
 foreach ($detailGame as $game){
     echo "
@@ -14,6 +15,11 @@ foreach ($detailGame as $game){
             ";
 
     echo "<div class='col-3'><h2 class='text-light'>Description</h2><br><p class='text-light'>" . $game->description . "</p></div></div>";
-    echo "";
+
+    foreach ($review as $data) {
+        echo "<p class='text-light'> . $data->description . </p>";
+    }
+
 }
+
 ?>

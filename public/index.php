@@ -13,6 +13,7 @@
     require '../Modules/common.php';
     require '../Modules/gamelist.php';
     require '../Modules/gameDetail.php';
+    require '../Modules/getReview.php';
 
 
 
@@ -52,6 +53,7 @@
         case "Elden%20Ring":
         case "Dying%20Light":
             $detailGame = getDetailGames();
+            $review = getReviews();
             include_once "../templates/gameDetail.php";
             break;
 
