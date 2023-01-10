@@ -15,26 +15,37 @@ foreach ($detailGame as $game){
             </div>
             ";
 
-    echo "<div class='col-3'><h2 class='text-light'>Description</h2><br><p class='text-light'>" . $game->description . "</p>";
-
-    $gameId = $game->id;
-
-    echo "<br><br><br><br>";
-    echo "<h2 class='text-light'>reviews</h2><br>";
-    foreach ($review as $data) {
-
-        $userId = $data->user_id;
-        $reviewUsername = "";
+        echo "<div class='col-3'><h2 class='text-light'>Description</h2><br><p class='text-light'>" . $game->description . "</p>";
+        echo "</div>";
 
 
-        if ($data->game_id === $gameId) {
-            echo "<div class='border border-light p-2'><p class='text-light'> . $reviewUsername . </p><br><p class='text-light'> . $data->description . </p></div></div></div> <br>";
-        } else {
-            echo "";
+
+
+        echo "<br><br><br><br>";
+        echo "<h2 class='text-light'>reviews</h2><br>";
+
+        echo "<div class='row'><div class='col-8'>";
+
+        $gameId = $game->id; //id of the game in the game-tabel
+        foreach ($review as $data) {
+            $userId = $data->user_id; //id van de user in review-tabel
+            $reviewUsername = "";
+    
+            foreach ($userReview as $reviewWriterData) {
+                if ($reviewWriterData->id === $userId) {
+                    $reviewUsername = $reviewWriterData->username;
+                }
+            }
+    
+    
+            if ($data->game_id === $gameId) {
+                echo "<div class='border border-light p-2 mb-2 text-break'><b><p class='text-light'>" . $reviewUsername . "</p></b><p class='text-light'>" . $data->description . "</p></div> <br>";
+            } else {
+                echo "";
+            }
         }
-        //echo "<br><br><br><br><h2 class='text-light'>reviews</h2><br><p class='text-light'> . $data->description . </p></div></div>";
-    }
 
+    echo "</div></div>";
 }
 
 ?>
