@@ -1,15 +1,15 @@
 <?php
-
+$_SESSION['message'] = "";
 function makeRegistration():string {
     global $pdo;
-    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-    $password = filter_input(INPUT_POST, 'password');
     $firstName = filter_input(INPUT_POST, 'firstName');
     $lastName = filter_input(INPUT_POST, 'lastName');
-    if ($email !== false && !empty($password) && !empty($firstName) && !empty($lastName)) {
-        $sql = 'SELECT * FROM `user` WHERE `email` = :e';
+    $username = filter_input(INPUT_POST, 'username');
+    $password = filter_input(INPUT_POST, 'password');
+    if (!empty($password) && !empty($firstName) && !empty($lastName) && !empty($username)) {
+        $sql = 'SELECT * FROM `user` WHERE `username` = :e';
         $sth = $pdo->prepare($sql);
-        $sth->bindParam(':e', $email);
+        $sth->bindParam(':e', $username);
         $sth->setFetchMode(PDO::FETCH_CLASS, 'User');
         $sth->execute();
         $user = $sth->fetch();
@@ -17,16 +17,16 @@ function makeRegistration():string {
         if ($user !== false) {
             return "EXIST";
         } else {
-            $sth = $pdo->prepare('INSERT INTO user (email, password, first_name, last_name, role) VALUES (?, ?, ?, ?, "Member")');
-            $sth->bindParam(1, $email);
-            $sth->bindParam(2, $password);
-            $sth->bindParam(3, $firstName);
-            $sth->bindParam(4, $lastName);
+            $sth = $pdo->prepare('INSERT INTO user (first_name, last_name, username, password, role) VALUES (?, ?, ?, ?, "Member")');
+            $sth->bindParam(1, $firstName);
+            $sth->bindParam(2, $lastName);
+            $sth->bindParam(3, $username);
+            $sth->bindParam(4, $password);
             $sth->execute();
             return "SUCCESS";
         }
     }
-    return "SUCCESS";
+    return "INCOMPLETE";
 }
 
 

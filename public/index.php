@@ -17,6 +17,7 @@
 
 
 
+    $_SESSION['message'] = "";
     $message = "";
 
     $request = $_SERVER['REQUEST_URI'];
@@ -36,17 +37,17 @@
 
                 switch ($result) {
                     case 'ADMIN':
-                        header("Location: /admin/home");
+                        include_once "../templates/adminHome.php";
                         break;
                     case 'MEMBER':
-                        header("Location: /member/home");
+                        include_once "../templates/memberHome.php";
                         break;
                     case 'FAILURE':
-                        $message = "Email of wachtwoord niet correct ingevuld!";
+                        $_SESSION['message'] = "Email of wachtwoord niet correct ingevuld!";
                         include_once "../templates/login.php";
                         break;
                     case 'INCOMPLETE':
-                        $message = "Formulier niet volledig ingevuld!";
+                        $_SESSION['message'] = "Formulier niet volledig ingevuld!";
                         include_once "../templates/login.php";
                         break;
                 }
@@ -63,15 +64,14 @@
                 $result = makeRegistration();
                 switch ($result) {
                     case 'SUCCESS':
-                        header("Location: /member
-                        /home");
+                        include_once "../templates/memberHome.php";
                         break;
                     case 'INCOMPLETE':
-                        $message = "Niet alle velden zijn correct ingevuld";
+                        $_SESSION['message'] = "Niet alle velden zijn correct ingevuld";
                         include_once "../templates/register.php";
                         break;
                     case 'EXIST':
-                        $message = "Gebruiker bestaat al";
+                        $_SESSION['message'] = "Gebruiker bestaat al";
                         include_once "../templates/register.php";
                         break;
                 }

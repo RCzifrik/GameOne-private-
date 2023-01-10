@@ -1,13 +1,14 @@
++
 <?php
 
 function checkLogin():string
 {
     global $pdo;
-    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $username = filter_input(INPUT_POST, 'email');
     $password = filter_input(INPUT_POST, 'password');
 
-    if ($email !== false && !empty($password)) {
-        $sql = 'SELECT * FROM `user` WHERE `email` = :e AND `password` = :p';
+    if (!empty($username) && !empty($password)) {
+        $sql = 'SELECT * FROM `user` WHERE `username` = :e AND `password` = :p';
         $sth = $pdo->prepare($sql);
         $sth->bindParam(':e', $email);
         $sth->bindParam(':p', $password);

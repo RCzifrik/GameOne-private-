@@ -1,6 +1,6 @@
-
 <html>
     <?php
+
         include_once('defaults/head.php');
     ?>
     <head>
@@ -25,3 +25,4 @@
         <script src="js/main.js" rel="javascript/application" type="text/javascript"></script>
 	</body>
 </html>
+    <?php session_destroy() ?>
