@@ -1,6 +1,7 @@
 <div class="container-md">
         <?php global $detailGame ?>
         <?php global $review ?>
+        <?php global $userReview ?>
 <?php
 foreach ($detailGame as $game){
     echo "
@@ -14,10 +15,24 @@ foreach ($detailGame as $game){
             </div>
             ";
 
-    echo "<div class='col-3'><h2 class='text-light'>Description</h2><br><p class='text-light'>" . $game->description . "</p></div></div>";
+    echo "<div class='col-3'><h2 class='text-light'>Description</h2><br><p class='text-light'>" . $game->description . "</p>";
 
+    $gameId = $game->id;
+
+    echo "<br><br><br><br>";
+    echo "<h2 class='text-light'>reviews</h2><br>";
     foreach ($review as $data) {
-        echo "<p class='text-light'> . $data->description . </p>";
+
+        $userId = $data->user_id;
+        $reviewUsername = "";
+
+
+        if ($data->game_id === $gameId) {
+            echo "<div class='border border-light p-2'><p class='text-light'> . $reviewUsername . </p><br><p class='text-light'> . $data->description . </p></div></div></div> <br>";
+        } else {
+            echo "";
+        }
+        //echo "<br><br><br><br><h2 class='text-light'>reviews</h2><br><p class='text-light'> . $data->description . </p></div></div>";
     }
 
 }

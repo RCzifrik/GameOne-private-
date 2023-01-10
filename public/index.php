@@ -14,6 +14,7 @@
     require '../Modules/gamelist.php';
     require '../Modules/gameDetail.php';
     require '../Modules/getReview.php';
+    require '../Modules/getUser.php';
 
 
 
@@ -54,6 +55,7 @@
         case "Dying%20Light":
             $detailGame = getDetailGames();
             $review = getReviews();
+            $userReview = getUsers();
             include_once "../templates/gameDetail.php";
             break;
 
