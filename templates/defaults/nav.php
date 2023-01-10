@@ -27,6 +27,9 @@
                         </ul>
                     </div>
                 </li>
+                <li class="nav-item d-flex align-items-center">
+                    <a class="nav-link text-light active" aria-current="page" href="contact">Contact</a>
+                </li>
             </ul>
         </div>
     </div>

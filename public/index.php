@@ -106,6 +106,11 @@
             include_once "../templates/gameDetail.php";
             break;
 
+        case 'contact':
+            $titleSuffix = ' | Contact';
+            include_once "../templates/contact.php";
+            break;
+
         default:
             $titleSuffix = ' | Home';
             $categories = getCategories();
@@ -114,4 +119,6 @@
             //include_once "../templates/gameDetail.php";
         break;
     }
+
+
 ?>
