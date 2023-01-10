@@ -1,0 +1,50 @@
+@keyframes named {
+  20% {
+    outline-color: #135299;
+  } 40% {
+    outline-color: #3d95fa;
+  } 60% {
+    outline-color: #135299;
+  } 80% {
+    outline-color: #3d95fa;
+  } 100% {
+    outline-color: #135299;
+  }
+}
+
+body {
+  height: 100vh;
+  background-image: url("../img/backgroundGameOne.jpg");
+  display: flex;
+  flex-direction: column;
+}
+
+h4 {
+  margin: 0;
+}
+
+.RaMRwPna form {
+  border: none;
+  outline: 1px solid white;
+  outline-offset: 30px;
+  background: radial-gradient(closest-corner, #ebebeb, #ebebeb, #ebebeb,#00000010);
+}
+
+.RaMRwPna form input {
+  border: none;
+  border-radius: 3px;
+  outline: 2px solid #3d95fa;
+  font-size: 18px;
+  width: 16em;
+  height: 2.1em;
+  color: #010020;
+}
+.RaMRwPna form input:focus{	
+  outline-color: #135299;
+  animation: named infinite reverse 3s;
+
+}
+
+.RaMRwPna form .fBLpnJUC {
+  font-size: 13px;
+}
