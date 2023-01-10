@@ -13,6 +13,7 @@
     require '../Modules/common.php';
     require '../Modules/gamelist.php';
     require '../Modules/gameDetail.php';
+    require '../Modules/register.php';
 
 
 
@@ -55,14 +56,15 @@
             break;
 
 
-        case 'register':
-            $titleSuffix = ' | Register';
+        case 'registreren':
+            $titleSuffix = ' | Registreren';
 
-            if (isset($_POST['register'])) {
+            if (isset($_POST['submit'])) {
                 $result = makeRegistration();
                 switch ($result) {
                     case 'SUCCESS':
-                        header("Location: /admin/home");
+                        header("Location: /member
+                        /home");
                         break;
                     case 'INCOMPLETE':
                         $message = "Niet alle velden zijn correct ingevuld";
@@ -105,6 +107,7 @@
             $detailGame = getDetailGames();
             include_once "../templates/gameDetail.php";
             break;
+
 
         case 'contact':
             $titleSuffix = ' | Contact';

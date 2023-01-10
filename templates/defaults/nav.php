@@ -26,6 +26,9 @@
                             ?>
                         </ul>
                     </div>
+                <li class="nav-item d-flex align-items-center">
+                    <a class="nav-link text-light active" aria-current="page" href="registreren">Registreren</a>
+                </li>
                 </li>
                 <li class="nav-item d-flex align-items-center">
                     <a class="nav-link text-light active" aria-current="page" href="contact">Contact</a>
