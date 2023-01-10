@@ -1,18 +1,13 @@
 @keyframes named {
   20% {
-    color: currentColor;
     outline-color: #135299;
   } 40% {
-    color: currentColor;
     outline-color: #3d95fa;
   } 60% {
-    color: #01002000;
     outline-color: #135299;
   } 80% {
-    color: currentColor;
     outline-color: #3d95fa;
   } 100% {
-    color: currentColor;
     outline-color: #135299;
   }
 }
